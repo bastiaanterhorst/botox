@@ -45,6 +45,11 @@ var Botox = {
       return true;
     }
 
+	// no xhr if the link points to an item that is served from the systems folder
+	if (url.indexOf("system") >= 0) {
+		return true;
+	}
+
     // we're good, xhr this link
     History.pushState(null,title,url);
 
