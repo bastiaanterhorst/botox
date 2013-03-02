@@ -55,6 +55,9 @@ var Botox = {
 
     // remember the element that triggered this load
     Botox.__currentTarget = e.currentTarget;
+    
+    // trigger an event that a state has been pushed
+    $(Botox).trigger('BotoxStatePushed', Botox.__currentState.url);
 
     // prevent the browser from handling the link
     e.preventDefault();
