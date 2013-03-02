@@ -57,7 +57,7 @@ var Botox = {
     Botox.__currentTarget = e.currentTarget;
     
     // trigger an event that a state has been pushed
-    $(Botox).trigger('BotoxStatePushed', Botox.__currentState.url);
+    $(Botox).trigger('BotoxStatePushed', url);
 
     // prevent the browser from handling the link
     e.preventDefault();
