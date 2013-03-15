@@ -74,7 +74,7 @@ var Botox = {
 
   loadRequest: function(url, callback) {
     // perform the request
-    $.getJSON(url, callback);
+    $.getJSON(url, callback).error(Botox.requestError);
   },
 
   requestLoaded: function(response, textStatus, jqXHR) {
