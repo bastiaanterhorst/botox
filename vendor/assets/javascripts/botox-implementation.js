@@ -50,6 +50,9 @@ var Botox = {
 		return true;
 	}
 
+    // trigger an event before the state will be pushed
+    $(Botox).trigger('BotoxStateWillPush', url);
+
     // we're good, xhr this link
     History.pushState(null,title,url);
 
